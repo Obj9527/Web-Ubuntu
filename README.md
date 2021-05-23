@@ -4,6 +4,7 @@ A website simulating Ubuntu's GUI, base on Vue + TailCSS, keep adding new featur
 
 ## Overview
 
+[![gXGJU0.png](https://z3.ax1x.com/2021/05/23/gXGJU0.png)](https://imgtu.com/i/gXGJU0)
 
 ## Quick Start
 ```
