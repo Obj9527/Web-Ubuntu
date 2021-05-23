@@ -1,7 +1,7 @@
 <template>
     <!--:style="{width: this.meta.width + 'px', height: this.meta.height + 'px'}"-->
     <div ref="window"
-         class="absolute window-shadow flex flex-col"
+         class="absolute window-shadow flex flex-col md:w-4/5"
          :class="[this.closed ? 'closed-window':'', this.minimized ? 'opacity-0 invisible duration-500' : '', this.maximized ? 'duration-300 rounded-none':'rounded-lg rounded-b-none', this.focused ? 'z-20':'z-0']"
          :id="this.window.id" @mousedown.stop="openMenu">
         <WindowHeader :id="this.window.id" :title="this.window.title" @mousedown.native="moveStart" @minimize="minimizeWindow" @maximize="maximizeWindow" @close="closeWindow" @restore="restoreWindow"/>

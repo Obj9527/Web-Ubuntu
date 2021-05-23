@@ -35,8 +35,21 @@
             turnOn() {
                 this.isBoot = true
                 setTimeout(() => {
+                    this.fullScreen()
                     this.$router.push('/desktop')
-                }, 3000)
+                }, 2000)
+            },
+            fullScreen() {
+                let element = document.documentElement;
+                if (element.requestFullscreen) {
+                    element.requestFullscreen()
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen()
+                } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen()
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen()
+                }
             }
         }
     }

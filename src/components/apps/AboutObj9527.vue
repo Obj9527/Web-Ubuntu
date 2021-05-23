@@ -1,7 +1,7 @@
 <template>
     <Window :window="this.meta">
         <template slot="content">
-            <div class="w-full h-full bg-ub-cool-grey relative text-white select-none overflow-hidden flex window-main-screen">
+            <div class="w-full h-full bg-ub-grey relative text-white select-none overflow-hidden flex window-main-screen">
                 <div class="w-1/4 h-full md:w-1/5 text-sm overflow-y-auto border-r border-black flex flex-col justify-start items-center">
                     <div :id="item.id" tabindex="0" v-for="item in items" :key="item.id"
                          class="w-28 md:w-full md:rounded-none rounded-sm cursor-default outline-none py-1.5 duration-100 my-0.5 flex justify-start items-center pl-2 md:pl-2.5"
@@ -11,14 +11,14 @@
                         <span class=" ml-1 md:ml-2 text-gray-50 ">{{item.title}}</span>
                     </div>
                 </div>
-                <div class="w-3/4 md:w-4/5 bg-ub-grey h-full flex flex-col justify-start items-center">
+                <div class="w-3/4 md:w-4/5 bg-ub-cool-grey h-full flex flex-col justify-start items-center">
                     <div v-if="focusedItem === 'about'" class="flex flex-col justify-start items-center">
-                        <div class="w-20 md:w-28 my-4 mx-auto bg-white rounded-full">
-                            <img class="w-full" :src="this.images.bitmoji" alt="obj9527's Logo" />
+                        <div class="w-20 md:w-28 mt-8 mx-auto bg-white rounded-full">
+                            <img class="w-full rounded" :src="this.images.headerIcon" alt="obj9527's Logo" />
                         </div>
-                        <div class=" mt-4 md:mt-8 text-lg md:text-2xl text-center px-1">
+                        <div class="mt-4 text-lg md:text-2xl text-center px-1">
                             <div>我叫<span class="font-bold">黄超杰</span> ,</div>
-                            <div class="font-normal ml-1">是一名<span class="text-pink-600 font-bold">软件工程师</span></div>
+                            <div class="font-normal ml-1">是一名<span class="text-pink-600 font-bold">前端工程师</span></div>
                         </div>
                         <div class="mx-auto my-4 relative md:my-8 pt-px bg-white w-32 md:w-48">
                             <div class="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 left-0"></div>
@@ -136,7 +136,7 @@
             return {
                 focusedItem: 'about',
                 images: {
-                    bitmoji: './images/logos/bitmoji.png',
+                    headerIcon: './images/logos/wow_cat.jpg',
                 },
                 items: [
                     {

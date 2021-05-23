@@ -51,7 +51,7 @@
         </div>
         <div class="w-64 py-1.5 flex items-center justify-center bg-ub-cool-grey hover:bg-ub-warm-grey hover:bg-opacity-20">
             <div class="w-8"><img :src="this.images.ubuntuPower" alt="ubuntu power"></div>
-            <div class="w-2/3 flex items-center justify-between"><span>Power Off / Log Out</span>
+            <div class="w-2/3 flex items-center justify-between" @mousedown="logout"><span>Power Off / Log Out</span>
                 <div class=" arrow-custom-right"></div>
             </div>
         </div>
@@ -78,6 +78,11 @@
                     ubuntuLock: './themes/Yaru/status/changes-prevent-symbolic.svg',
                     ubuntuPower: './themes/Yaru/status/system-shutdown-symbolic.svg',
                 }
+            }
+        },
+        methods:{
+            logout() {
+                this.$router.push('/login')
             }
         }
     }

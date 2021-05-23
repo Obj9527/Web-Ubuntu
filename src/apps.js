@@ -1,8 +1,8 @@
 const apps = [
     {
-        id: "chrome",
-        title: "Google Chrome",
-        icon: './themes/Yaru/apps/chrome.png',
+        id: "firefox",
+        title: "Firefox Browser",
+        icon: './themes/Yaru/apps/firefox.svg',
         disabled: false,
         favourite: true,
         desktop_shortcut: true,
