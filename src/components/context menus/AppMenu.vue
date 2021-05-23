@@ -4,6 +4,7 @@
         <a rel="noreferrer noopener" href="https://github.com/obj9527/obj9527.github.io" target="_blank" class="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
             <span class="ml-5">🌟</span> <span class="ml-2">Star this Project</span>
         </a>
+        <Separator class="w-52"/>
         <a rel="noreferrer noopener" href="https://github.com/vivek9patel/vivek9patel.github.io/issues" target="_blank" class="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
             <span class="ml-7">❗</span> <span class="ml-3">Report bugs</span>
         </a>
@@ -13,6 +14,7 @@
         <a rel="noreferrer noopener" href="https://github.com/obj9527" target="_blank" class="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
             <span class="ml-5">🤝</span> <span class="ml-2">Follow on <strong>Github</strong></span>
         </a>
+        <Separator class="w-52"/>
         <a rel="noreferrer noopener" href="1213699301@qq.com" target="_blank" class="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5">
             <span class="ml-5">📥</span> <span class="ml-2">Contact Me</span>
         </a>
@@ -20,7 +22,9 @@
 </template>
 
 <script>
+    import Separator from "@/components/utils/Separator";
     export default {
-        name: "AppMenu"
+        name: "AppMenu",
+        components: {Separator}
     }
 </script>

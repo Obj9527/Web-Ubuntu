@@ -7,7 +7,7 @@
         <Navbar/>
         <DesktopAppArray :apps="this.apps"/>
         <div v-for="window in this.windowList" :key="window.id">
-            <Chrome v-if="window.id === 'chrome'" :meta="window"/>
+            <Chrome v-if="window.id === 'firefox'" :meta="window"/>
             <VScode v-if="window.id === 'vscode'" :meta="window"/>
             <ToDoList v-if="window.id === 'todo-ist'" :meta="window"/>
             <Settings v-if="window.id === 'settings'" :meta="window"/>
@@ -110,6 +110,7 @@
                             window.style.transform = null
                         }
                         this.$store.commit('restoreWindow', id)
+                        this.$store.commit('refreshWindowFocused', id)
                         return
                     }
                 }
