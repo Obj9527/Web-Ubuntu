@@ -55,8 +55,8 @@
                 currentDirName: "root",
                 childDirectories: {
                     root: ["books", "projects", "personal-documents", "skills", "languages", "interests"],
-                    books: ["Eric-Jorgenson_The-Almanack-of-Naval-Ravikant.pdf", "Elon Musk: How the Billionaire CEO of SpaceX.pdf", "The $100 Startup_CHRIS_GUILLEBEAU.pdf", "The_Magic_of_Thinking_Big.pdf"],
-                    skills: ["Front-end development", "React.js", "jQuery", "Flutter", "Express.js", "SQL", "Firebase"],
+                    books: ["Thinking in Java.pdf", "JavaScript高级程序设计.pdf", "你所不知道的JavaScript.pdf", "数据结构.pdf", "计算机网络.pdf"],
+                    skills: ["Vue.js", "React.js", "jQuery", "TailCSS","Element-UI", "SQL"],
                     projects: ["power-CMS", "Web-Ubuntu", "ECall/BCall", "zzjbhack.com", "BYD Bug Platform", " Charging Pile Management"],
                     interests: ["Front Side", "Games Dev", "Computer Vision"],
                     languages: ["Javascript", "C", "Java", "Python"],
