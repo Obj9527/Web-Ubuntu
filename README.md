@@ -10,8 +10,8 @@ you can access https://obj9527.github.io/ to use it
 
 ## Quick Start
 ```
-git clone https://github.com/obj9527/obj9527.github.io.git
-cd obj9527.github.io
+git clone git@github.com:Obj9527/Web-Ubuntu.git
+cd Web-Ubuntu
 npm install
 npm run serve
 ```
