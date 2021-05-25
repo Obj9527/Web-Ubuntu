@@ -2,7 +2,7 @@
     <div class="relative duration-500 select-none flex flex-col justify-around items-center top-0 right-0 overflow-hidden m-0 p-0 h-screen w-screen bg-ub-violet">
         <img class="md:w-1/4 w-1/2" :src="this.icons.cofOrangeHex" alt="Ubuntu Logo"/>
         <div class="w-10 h-10 flex justify-center items-center rounded-full outline-none cursor-pointer" @click="turnOn">
-            <div class="rounded-full flex justify-center items-center w-10 h-10 hover:bg-gray-300" :class="isBoot ? 'bg-ub-violet':'bg-white'">
+            <div class="rounded-full flex justify-center items-center w-10 h-10 hover:bg-gray-300" :class="this.isBoot ? 'hover:bg-ub-violet':'bg-white'">
                 <img v-if="!isBoot" class="w-8" :src="this.icons.powerButton" alt="Power Button">
                 <img v-if="isBoot" :class="this.isBoot ? 'animate-spin':''" class="w-10" :src="this.icons.processSymbol" alt="Ubuntu Process Symbol" />
             </div>
