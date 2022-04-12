@@ -25,7 +25,7 @@
                             <div class="bg-white absolute rounded-full p-0.5 md:p-1 top-0 transform -translate-y-1/2 right-0"></div>
                         </div>
                         <ul class="leading-tight tracking-tight text-sm md:text-base w-5/6 md:w-3/4 emoji-list">
-                            <li class=" mt-3 list-pc">我有1年的<span class=" font-medium">工作经验</span></li>
+                            <li class=" mt-3 list-pc">我有3年的<span class=" font-medium">工作经验</span></li>
                             <li class=" mt-3 list-building"> 我喜欢编程，希望用程序能给世界带来更多有意思的东西 </li>
                             <li class=" mt-3 list-time"> 我之前主要使用的是后端语言，在工作中接触到前端，对前端很感兴趣，见到大佬用React做了个仿Ubuntu的，所以用Vue+TailCSS写了一个，希望大家喜欢</li>
                             <li class=" mt-3 list-star"> 目前正在求职，目标职位：<span class="text-yellow-600 font-bold">前端工程师</span>，希望能找份有时间自我学习与生活的工作 </li>
