@@ -1,12 +1,12 @@
 <template>
     <div class="w-screen h-screen overflow-hidden relative select-none">
         <BackgroundImage :wallpaper="this.wallpaper"/>
-        <Sidebar :apps="this.apps" @appClick="openWindow"/>
+        <Sidebar :apps="apps" @appClick="openWindow"/>
         <DesktopMenu/>
         <AppMenu/>
         <Navbar/>
-        <DesktopAppArray :apps="this.apps"/>
-        <div v-for="window in this.windowList" :key="window.id">
+        <DesktopAppArray :apps="apps"/>
+        <div v-for="window in windowList" :key="window.id">
             <Chrome v-if="window.id === 'firefox'" :meta="window"/>
             <VScode v-if="window.id === 'vscode'" :meta="window"/>
             <ToDoList v-if="window.id === 'todo-ist'" :meta="window"/>
