@@ -1,8 +1,6 @@
 <template>
 	<div class="absolute right-0 w-auto h-auto flex flex-col justify-start items-center" style="top: 30px">
-		<div v-for="app in this.apps" :key="app.id">
-			<DesktopApp v-if="app.desktop_shortcut" :app="app" @dblclick.native="openApp(app)" />
-		</div>
+			<DesktopApp v-for="app in desktopApps" :key="app.id" :app="app" @dblclick.native="openApp(app)" />
 	</div>
 </template>
 
@@ -19,6 +17,13 @@
 		components: {
 			DesktopApp
 		},
+    computed: {
+      desktopApps() {
+        return this.apps.filter((app) => {
+          return app.desktop_shortcut;
+        })
+      }
+    },
 		methods: {
 			openApp(app) {
 				setTimeout(() => {
