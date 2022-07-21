@@ -33,6 +33,7 @@ import Gedit from "../../components/apps/Gedit";
 import Trash from "../../components/apps/Trash";
 import CloudMusic from "../../components/apps/Music";
 import MarkdownEditor from "../../components/apps/MarkdownEditor";
+import Blog from "@/components/apps/Blog";
 import apps from "@/apps.js";
 
 export default {
@@ -82,6 +83,7 @@ export default {
     Navbar,
     BackgroundImage,
     Sidebar,
+    Blog,
   },
   methods: {
     openWindow(id) {

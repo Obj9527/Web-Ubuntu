@@ -1,5 +1,15 @@
 const apps = [
   {
+    id: "blog",
+    component: "Blog",
+    title: "Blog",
+    icon: "./themes/Yaru/apps/gedit.png",
+    disabled: false,
+    favourite: true,
+    desktop_shortcut: true,
+    meta: {},
+  },
+  {
     id: "firefox",
     component: "Firefox",
     title: "Firefox Browser",
@@ -86,7 +96,7 @@ const apps = [
     icon: "./themes/Yaru/apps/gedit.png",
     disabled: false,
     favourite: false,
-    desktop_shortcut: true,
+    desktop_shortcut: false,
     meta: {},
   },
 ];
