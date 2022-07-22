@@ -1,15 +1,5 @@
 const apps = [
   {
-    id: "blog",
-    component: "Blog",
-    title: "Blog",
-    icon: "./themes/Yaru/apps/gedit.png",
-    disabled: false,
-    favourite: true,
-    desktop_shortcut: true,
-    meta: {},
-  },
-  {
     id: "firefox",
     component: "Firefox",
     title: "Firefox Browser",
@@ -34,6 +24,16 @@ const apps = [
     component: "AboutObj9527",
     title: "About Obj9527",
     icon: "./themes/Yaru/system/user-home.png",
+    disabled: false,
+    favourite: true,
+    desktop_shortcut: true,
+    meta: {},
+  },
+  {
+    id: "blog",
+    component: "Blog",
+    title: "My Blog",
+    icon: "./themes/Yaru/apps/blog.svg",
     disabled: false,
     favourite: true,
     desktop_shortcut: true,
@@ -95,8 +95,8 @@ const apps = [
     title: "Send a Message",
     icon: "./themes/Yaru/apps/gedit.png",
     disabled: false,
-    favourite: false,
-    desktop_shortcut: false,
+    favourite: true,
+    desktop_shortcut: true,
     meta: {},
   },
 ];
