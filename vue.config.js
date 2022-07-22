@@ -6,7 +6,7 @@ const mockServer = () => {
 
 module.exports = {
   devServer: {
-    port: 8081, // 端口
+    port: 8082, // 端口
     open: true,
     after: mockServer(),
   },

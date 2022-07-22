@@ -13,7 +13,7 @@ you can access https://obj9527.github.io/ to use it
 git clone git@github.com:Obj9527/Web-Ubuntu.git
 cd Web-Ubuntu
 npm install
-npm run serve
+npm run dev
 ```
 
 ## Why write this
