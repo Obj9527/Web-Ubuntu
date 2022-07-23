@@ -4,11 +4,14 @@ import router from "./router";
 import store from "./store";
 import "./assets/tailwind.css";
 import "./assets/style.css";
-import markdownit from "markdown-it";
+import filters from "./utils/filter";
 
 Vue.config.productionTip = false;
 
-window.markdownit = markdownit;
+// 注册过滤器
+for (const key in filters) {
+  Vue.filter(key, filters[key]);
+}
 
 new Vue({
   router,
