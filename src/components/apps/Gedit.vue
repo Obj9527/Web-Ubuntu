@@ -88,7 +88,7 @@
 
 <script>
 import Window from "../window/Window";
-import { validEmail } from "@/api/validate";
+import { validEmail } from "@/utils/validate.js";
 import emailjs from "emailjs-com";
 
 export default {

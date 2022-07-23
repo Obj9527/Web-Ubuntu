@@ -95,7 +95,7 @@ const apps = [
     title: "Send a Message",
     icon: "./themes/Yaru/apps/gedit.png",
     disabled: false,
-    favourite: true,
+    favourite: false,
     desktop_shortcut: true,
     meta: {},
   },
