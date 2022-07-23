@@ -6,17 +6,18 @@
           class="w-1/4 h-full text-sm overflow-y-auto border-r border-black flex flex-col justify-start items-center bg-ub-grey"
         >
           <div
-            v-for="p in filterdPapers"
-            :key="p"
+            v-for="article in articles"
+            :key="article.id"
             class="w-28 md:w-full md:rounded-none rounded-sm cursor-default outline-none py-1.5 duration-100 my-0.5 flex justify-start items-center pl-2 md:pl-2.5"
             :class="
-              focusedItem === p
+              focusedItem === article
                 ? 'bg-ub-orange bg-opacity-100 hover:bg-opacity-90'
                 : 'hover:bg-opacity-5 hover:bg-gray-50'
             "
-            @focusin="changeFocused(p)"
+            @focusin="changeFocused(article.id)"
           >
-            <span class="ml-1 md:ml-2 text-gray-50">{{ p }}</span>
+            <div class="ml-1 md:ml-2 text-gray-50">{{ article.id }}</div>
+            <div>{{ article.updatedTime | datetime }}</div>
           </div>
         </div>
         <div class="w-3/4 markdown-wrapper">
@@ -32,6 +33,7 @@ import Window from "@/components/window/Window";
 import axios from "axios";
 import hljs from "highlight.js";
 import "highlight.js/styles/monokai.css";
+import markdownit from "markdown-it";
 
 export default {
   name: "Blog",
@@ -52,26 +54,17 @@ export default {
     return {
       md: null,
       result: null,
-      papers: [],
+      articles: [],
       focusedItem: "",
     };
   },
-  computed: {
-    filterdPapers() {
-      return this.papers.map((item) => {
-        let tempArray = item.addr.split("/");
-        return tempArray[tempArray.length - 1];
-      });
-    },
-  },
   methods: {
     changeFocused(id) {
-      debugger;
       this.focusedItem = id;
       console.log(this.focusedItem);
     },
     initMarkDownIt() {
-      let md = window.markdownit({
+      let md = markdownit({
         html: false, // Enable HTML tags in source
         xhtmlOut: false, // Use '/' to close single tags (<br />).
         // This is only for full CommonMark compatibility.
@@ -109,17 +102,20 @@ export default {
       ) => {
         return `<code style="color: #f92672">${tokens[idx].content}</code>`;
       };
+      // 自定义url渲染
+      md.renderer.rules.link_open = (tokens, idx /*, options, env, self*/) => {
+        return `<a href="${tokens[idx].attrs[0][1]}" style="color: #FF5733" target="_blank" rel='noreferrer noopener'>`;
+      };
       return md;
     },
     getBlog() {
       axios.get("./files/mdFilesAddress.json").then((res) => {
-        const { addrs } = res.data || {};
-        this.papers = addrs;
-        console.log(this.papers[0].addr.split("/")[-1]);
-        axios.get(addrs[0].addr).then((res) => {
+        const { articles } = res.data || {};
+        this.articles = articles;
+        console.log(this.articles);
+        axios.get(this.articles[0].url).then((res) => {
           this.result = res.data;
           this.result = this.md.render(this.result);
-          console.log("result", this.result);
         });
       });
     },

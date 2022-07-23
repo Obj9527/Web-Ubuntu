@@ -1,18 +1,6 @@
 const fs = require("fs");
 const { join } = require("path");
 
-const genAddressJson = (mdFiles, prefix = "./files/") => {
-  let obj = {};
-  let addrs = [];
-  mdFiles.forEach((item) => {
-    addrs.push({
-      addr: prefix + item,
-    });
-  });
-  obj.addrs = addrs;
-  fs.writeFileSync("./public/files/mdFilesAddress.json", JSON.stringify(obj));
-};
-
 function genBlogAddrs() {
   const mdFiles = [];
   const findMarkdownFiles = (path) => {
@@ -24,13 +12,22 @@ function genBlogAddrs() {
         findMarkdownFiles(item);
       }
       if (stat.isFile() && item.indexOf(".md") > -1) {
-        mdFiles.push(item);
+        mdFiles.push({
+          id: item,
+          url: "./files/" + item,
+          updatedTime: stat.mtimeMs,
+          createdTime: stat.birthtimeMs,
+        });
       }
     });
   };
   findMarkdownFiles("./public/files");
-  genAddressJson(mdFiles);
-  console.log(mdFiles);
+  let obj = {
+    articles: mdFiles,
+    total: mdFiles.length,
+  };
+  fs.writeFileSync("./public/files/mdFilesAddress.json", JSON.stringify(obj));
+  console.log(obj);
 }
 
 genBlogAddrs();

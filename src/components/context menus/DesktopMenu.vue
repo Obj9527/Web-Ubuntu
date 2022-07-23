@@ -66,14 +66,14 @@ export default {
     addNewFolder() {},
     openTerminal() {
       setTimeout(() => {
-        this.$store.commit("openWindow", this.apps[4]);
-        this.$store.commit("refreshWindowFocused", this.apps[4].id);
+        this.$store.commit("openWindow", this.apps[5]);
+        this.$store.commit("refreshWindowFocused", this.apps[5].id);
       }, 400);
     },
     openSettings() {
       setTimeout(() => {
-        this.$store.commit("openWindow", this.apps[6]);
-        this.$store.commit("refreshWindowFocused", this.apps[6].id);
+        this.$store.commit("openWindow", this.apps[7]);
+        this.$store.commit("refreshWindowFocused", this.apps[7].id);
       }, 400);
     },
   },
