@@ -31,7 +31,7 @@ import AboutObj9527 from "../../components/apps/AboutObj9527";
 import Terminal from "../../components/apps/Terminal";
 import Gedit from "../../components/apps/Gedit";
 import Trash from "../../components/apps/Trash";
-import CloudMusic from "../../components/apps/Music";
+import Music from "../../components/apps/Music";
 import MarkdownEditor from "../../components/apps/MarkdownEditor";
 import Blog from "@/components/apps/Blog";
 import apps from "@/apps.js";
@@ -68,7 +68,7 @@ export default {
   },
   components: {
     MarkdownEditor,
-    CloudMusic,
+    Music,
     Trash,
     Gedit,
     Terminal,

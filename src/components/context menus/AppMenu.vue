@@ -11,7 +11,8 @@
       class="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5"
     >
       <div class="menu-item">
-        <span class="ml-5">🌟</span> <span class="ml-2">Star this Project</span>
+        <span class="ml-5">🌟</span>
+        <span class="ml-2">Star this Project</span>
       </div>
     </a>
     <a
@@ -21,7 +22,8 @@
       class="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5"
     >
       <div class="menu-item">
-        <span class="ml-5">❗</span> <span class="ml-2">Report bugs</span>
+        <span class="ml-5">❗</span>
+        <span class="ml-2">Report bugs</span>
       </div>
     </a>
     <a
@@ -53,7 +55,8 @@
       class="w-full block cursor-default py-0.5 hover:bg-ub-warm-grey hover:bg-opacity-20 mb-1.5"
     >
       <div class="menu-item">
-        <span class="ml-5">📥</span> <span class="ml-2">Contact Me</span>
+        <span class="ml-5">📥</span>
+        <span class="ml-2">Contact Me</span>
       </div>
     </a>
   </div>

@@ -4,6 +4,16 @@ A website simulating Ubuntu's GUI, base on Vue + TailCSS, keep adding new featur
 
 you can access https://obj9527.github.io/ to use it
 
+## update
+### 2022.08.09
+- 增加博客功能，使用方法：写好博文后，将md文件放入`public/files`文件夹，然后运行`node genBlogAddr.js`，之后正常打包部署即可，打开桌面的Blog App即可阅览
+- 修复bug，优化性能
+- 引入prettier
+---
+- Add Blog function, use method: write Blog post, MD file into the `public/files` folder, and then run` node Genblogaddr.js`, after the normal packaging deployment, open the desktop Blog App can be read
+- Fix bugs and optimize performance
+- Add prettier
+
 ## Overview
 
 [![gXGJU0.png](https://z3.ax1x.com/2021/05/23/gXGJU0.png)](https://imgtu.com/i/gXGJU0)
