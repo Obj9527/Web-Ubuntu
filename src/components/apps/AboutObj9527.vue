@@ -277,7 +277,7 @@
           <div v-if="focusedItem === 'resume'" class="w-full h-full">
             <iframe
               class="h-full w-full border-0"
-              src="./files/前端简历v1.0.pdf"
+              src="./files/resume.pdf"
               title="obj9527 resume"
             ></iframe>
           </div>
